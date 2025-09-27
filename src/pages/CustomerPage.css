@@ -1,0 +1,128 @@
+.customer-page {
+  /* Uses shared styles from PainterPage.css */
+}
+
+.customer-fullscreen {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #eaf0ff 0%, #f7f7fa 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-header {
+  width: 100%;
+  background: #2563eb;
+  color: #fff;
+  padding: 48px 0 32px 0;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.customer-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+.customer-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.customer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.card-large {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 32px 28px;
+}
+
+.success-msg {
+  color: #22c55e;
+  background: #eafbe7;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.error-msg {
+  color: #ef4444;
+  background: #fee2e2;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  font-size: 1.08rem;
+  overflow: hidden;
+}
+.bookings-table th, .bookings-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+.bookings-table th {
+  background: #eaf0ff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+}
+.bookings-table tr:last-child td {
+  border-bottom: none;
+}
+.bookings-table tr {
+  transition: background 0.2s;
+}
+.bookings-table tbody tr:hover {
+  background: #f7f7fa;
+}
+.bookings-table td {
+  color: #333;
+}
+.bookings-table td.status-Pending {
+  color: #f59e42;
+  font-weight: 600;
+}
+.bookings-table td.status-Confirmed {
+  color: #2563eb;
+  font-weight: 600;
+}
+.bookings-table td.status-Completed {
+  color: #22c55e;
+  font-weight: 600;
+}
+.bookings-table td.status-Cancelled {
+  color: #ef4444;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .bookings-table th, .bookings-table td {
+    padding: 10px 6px;
+    font-size: 0.98rem;
+  }
+  .card-large {
+    padding: 18px 6px;
+  }
+}
