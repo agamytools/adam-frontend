@@ -15,7 +15,7 @@ export default function PainterPage() {
       setLoading(true);
       try {
         // Example API call, replace with your endpoint
-        const res = await fetch('http://127.0.0.1:3000/api/v1/technicians/timeslots/availability?technicianId=1&lastId=0&limit=10');
+        const res = await fetch('http://136.115.12.229:3000/api/v1/technicians/timeslots/availability?technicianId=1&lastId=0&limit=10');
         const data = await res.json();
         setSlots(data.data);
       } catch (err) {
@@ -30,7 +30,7 @@ export default function PainterPage() {
   const handleAddSlot = async (e) => {
     e.preventDefault();
     // Example POST request, replace with your API endpoint
-    await fetch('http://127.0.0.1:3000/api/v1/technicians/timeslots/availability', {
+    await fetch('http://136.115.12.229:3000/api/v1/technicians/timeslots/availability', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({technicianId:1, startTime, endTime })
@@ -41,7 +41,7 @@ export default function PainterPage() {
 
     // Refresh slots
     setLoading(true);
-    const res = await fetch('http://127.0.0.1:3000/api/v1/technicians/timeslots/availability?technicianId=1&lastId=0&limit=10');
+    const res = await fetch('http://136.115.12.229:3000/api/v1/technicians/timeslots/availability?technicianId=1&lastId=0&limit=10');
     const data = await res.json();
     setSlots(data.data);
     setLoading(false);

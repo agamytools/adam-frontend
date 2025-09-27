@@ -31,7 +31,7 @@ export default function CustomerPage() {
         async function fetchBookings() {
             setBookingsLoading(true);
             try {
-                const res = await fetch('http://127.0.0.1:3000/api/v1/bookings/my-bookings?customerId=1&offset=0&limit=10');
+                const res = await fetch('http://136.115.12.229:3000/api/v1/bookings/my-bookings?customerId=1&offset=0&limit=10');
                 const data = await res.json();
                 setBookings(data.data.records || []);
             } catch (err) {
@@ -49,7 +49,7 @@ export default function CustomerPage() {
         setSuccess(null);
         setError(null);
         try {
-            const res = await fetch('http://127.0.0.1:3000/api/v1/bookings/booking-request', {
+            const res = await fetch('http://136.115.12.229:3000/api/v1/bookings/booking-request', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
